@@ -1,0 +1,37 @@
+{
+	"name": "socionus",
+	"version": "1.0.0",
+	"description": "Socionus is a social media platform based on the way Twitter works. Users can post and follow other users.",
+	"main": "app.js",
+	"scripts": {
+		"test": "nodemon app.js",
+		"dev": "nodemon app.js",
+		"start": "node app.js",
+		"build": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pmvdbijl7/socionus.git"
+	},
+	"author": "Patrick van der Bijl",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/pmvdbijl7/socionus/issues"
+	},
+	"homepage": "https://github.com/pmvdbijl7/socionus#readme",
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	},
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"dotenv": "^8.2.0",
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"express-flash": "^0.0.2",
+		"express-session": "^1.17.1",
+		"method-override": "^3.0.0",
+		"mongoose": "^5.12.2",
+		"passport": "^0.4.1",
+		"passport-local": "^1.0.0"
+	}
+}
