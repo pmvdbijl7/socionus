@@ -15,6 +15,7 @@ const dbConnection = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_
 // Import Routes
 const authRoutes = require('./routes/authRoutes');
 const homeRoutes = require('./routes/homeRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 
 // Set Templating Engine
 app.set('view engine', 'ejs');
@@ -54,6 +55,7 @@ mongoose.connect(
 // Route Middlewares
 app.use(authRoutes);
 app.use(homeRoutes);
+app.use(profileRoutes);
 
 // Show 404 Page if Page Doesn't Exist
 app.use((req, res, next) => {

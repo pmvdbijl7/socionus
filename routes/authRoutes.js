@@ -2,6 +2,7 @@ const router = require('express').Router();
 const authController = require('../controllers/authController');
 const passport = require('passport');
 const accessController = require('../controllers/accessController');
+const validationController = require('../controllers/validationController');
 
 // Register
 router.get(
@@ -12,6 +13,7 @@ router.get(
 router.post(
 	'/signup',
 	accessController.checkNotAuthenticated,
+	validationController.registerValidation,
 	authController.registerPost
 );
 

@@ -5,7 +5,10 @@ const bcrypt = require('bcrypt');
 function initialize(passport) {
 	passport.use(
 		new LocalStrategy((username, password, done) => {
-			User.findOne({ username: username }, async (err, user) => {
+			// Lowercase filled in username
+			const usernameLowerCase = username.toLowerCase();
+
+			User.findOne({ username: usernameLowerCase }, async (err, user) => {
 				if (err) {
 					return done(err);
 				}
