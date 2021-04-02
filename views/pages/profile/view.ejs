@@ -5,9 +5,13 @@
 	</head>
 
 	<body>
+		<%- include('../../partials/_header'); %>
+
 		<main>
-			<h1>Username: <%= user.username %></h1>
+			<h1>Username: @<%= user.username %></h1>
 			<h2>Email Address: <%= user.email %></h2>
 		</main>
+
+		<%- include('../../partials/_footer'); %>
 	</body>
 </html>

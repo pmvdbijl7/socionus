@@ -1,0 +1,49 @@
+<footer>
+	<a href="/" <% if (pageName === 'home') { %> class="active" <% } %>>
+        <% if (pageName === 'home') { %>
+            <svg>
+                <use xlink:href="/media/images/home-icon.svg#home-icon"></use>
+            </svg>
+        <% } else { %>
+            <svg>
+                <use xlink:href="/media/images/home-icon-outline.svg#home-icon"></use>
+            </svg>
+        <% } %>
+	</a>
+
+	<a href="/search" <% if (pageName === 'search') { %> class="active" <% } %>>
+        <% if (pageName === 'search') { %>
+            <svg>
+                <use xlink:href="/media/images/search-icon.svg#search-icon"></use>
+            </svg>
+        <% } else { %>
+            <svg>
+                <use xlink:href="/media/images/search-icon-outline.svg#search-icon"></use>
+            </svg>
+        <% } %>
+	</a>
+
+	<a href="/notifications" <% if (pageName === 'notifications') { %> class="active" <% } %>>
+        <% if (pageName === 'notifications') { %>
+            <svg>
+                <use xlink:href="/media/images/notification-icon.svg#notification-icon"></use>
+            </svg>
+        <% } else { %>
+            <svg>
+                <use xlink:href="/media/images/notification-icon-outline.svg#notification-icon"></use>
+            </svg>
+        <% } %>
+	</a>
+
+	<a href="/messages" <% if (pageName === 'messages') { %> class="active" <% } %>>
+        <% if (pageName === 'messages') { %>
+            <svg>
+                <use xlink:href="/media/images/message-icon.svg#message-icon"></use>
+            </svg>
+        <% } else { %>
+            <svg>
+                <use xlink:href="/media/images/message-icon-outline.svg#message-icon"></use>
+            </svg>
+        <% } %>
+	</a>
+</footer>

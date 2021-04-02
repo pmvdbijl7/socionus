@@ -5,12 +5,12 @@
 	</head>
 
 	<body>
-		<main>
-			<h1>Welcome <%= user.username %></h1>
+		<%- include('../partials/_header'); %>
 
-			<form action="/logout?_method=DELETE" method="POST">
-				<button type="submit">Logout</button>
-			</form>
+		<main>
+			<h1>Welcome <%= authUser.username %></h1>
 		</main>
+
+		<%- include('../partials/_footer'); %>
 	</body>
 </html>

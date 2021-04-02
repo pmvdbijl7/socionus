@@ -1,0 +1,26 @@
+// Import Variables
+@import './variables';
+
+.auth-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 0 25px;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 1.5em;
+	}
+
+	p {
+		font-size: 12px;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: $primary-color;
+		}
+	}
+}

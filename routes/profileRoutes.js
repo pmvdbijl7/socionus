@@ -3,7 +3,7 @@ const profileController = require('../controllers/profileController');
 const accessController = require('../controllers/accessController');
 
 router.get(
-	'/profile',
+	'/:username',
 	accessController.checkAuthenticated,
 	profileController.profileGet
 );

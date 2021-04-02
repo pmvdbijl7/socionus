@@ -23,3 +23,12 @@ h5,
 h6 {
 	color: $title-color;
 }
+
+.highlight {
+	color: $primary-color;
+}
+
+@import './header';
+@import './footer';
+@import './forms';
+@import './auth';

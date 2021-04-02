@@ -1,0 +1,65 @@
+<header>
+	<nav>
+		<button aria-label="Open and close menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<ul>
+			<div class="head">
+				<p>@<%= authUser.username %></p>
+			</div>
+
+			<div class="main">
+				<li>
+					<a href="/<%= authUser.username %>">
+						<svg>
+							<use
+								xlink:href="/media/images/profile-icon-outline.svg#profile-icon"
+							></use>
+						</svg>
+						Profile
+					</a>
+				</li>
+			</div>
+
+			<div class="important">
+				<li>
+					<a href="/settings/account">Instellingen en privacy</a>
+				</li>
+			</div>
+
+			<div class="footer">
+				<li>
+					<form action="/logout?_method=DELETE" method="POST">
+						<button type="submit">
+							<svg>
+								<use
+									xlink:href="/media/images/logout-icon.svg#logout-icon"
+								></use>
+							</svg>
+							Logout
+						</button>
+					</form>
+				</li>
+			</div>
+		</ul>
+
+		<div class="overlay"></div>
+	</nav>
+
+	<a href="/" class="highlight">
+		<img src="/media/images/logo-socionus.png" alt="Socionus logo" />
+	</a>
+
+	<a href="/settings/account">
+		<svg>
+			<use
+				xlink:href="/media/images/settings-icon-outline.svg#settings-icon"
+			></use>
+		</svg>
+	</a>
+
+	<script src="/js/scripts.js"></script>
+</header>

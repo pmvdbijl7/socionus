@@ -7,16 +7,21 @@
 	<body>
 		<main>
 			<div class="auth-container">
-				<h1>Sign In to Socionus</h1>
+				<h1>Sign In to <span class="highlight">Socionus</span></h1>
 
 				<% if (messages.error) { %>
-				<p><%= messages.error %></p>
+				<p class="msg-error"><%= messages.error %></p>
 				<% } %>
 
 				<form action="/signin" method="POST">
 					<div class="form-group">
 						<label for="username">Username</label>
-						<input type="text" name="username" id="username" />
+						<input
+							type="text"
+							name="username"
+							id="username"
+							autofocus
+						/>
 					</div>
 
 					<div class="form-group">
