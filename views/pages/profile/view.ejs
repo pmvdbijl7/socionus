@@ -5,13 +5,37 @@
 	</head>
 
 	<body>
-		<%- include('../../partials/_header'); %>
-
 		<main>
-			<h1>Username: @<%= user.username %></h1>
-			<h2>Email Address: <%= user.email %></h2>
-		</main>
+			<section class="user-info">
+				<% if (user.profile_image) { %>
+				<img
+					src="/uploads/<%= user.profile_image %>"
+					alt="Profile image"
+				/>
+				<% } else { %>
+				<img
+					src="/media/images/default_profile_image.jpg"
+					alt="Profile image"
+				/>
+				<% } %> <% if (user.name) { %>
+				<h1><%= user.name %></h1>
+				<% } %>
 
-		<%- include('../../partials/_footer'); %>
+				<h2>@<%= user.username %></h2>
+
+				<% if (user.description) { %>
+				<p class="description"><%= user.description %></p>
+				<% } %> <% if (user.location) { %>
+				<p><%= user.location %></p>
+				<% } %> <% if (user.birthdate) { %>
+				<p><%= user.birthdate %></p>
+				<% } %>
+
+				<p>
+					Joined <%= user.createdAt.toLocaleDateString('en-GB', {
+					month: 'long', year: 'numeric' }) %>
+				</p>
+			</section>
+		</main>
 	</body>
 </html>

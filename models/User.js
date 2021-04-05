@@ -19,6 +19,29 @@ const userSchema = new Schema(
 			minLength: 8,
 			required: true,
 		},
+		profile_image: {
+			data: Buffer,
+			type: String,
+		},
+		name: {
+			type: String,
+			maxLength: 50,
+		},
+		description: {
+			type: String,
+			maxLength: 255,
+		},
+		location: {
+			type: String,
+			maxLength: 255,
+		},
+		url: {
+			type: String,
+			maxLength: 255,
+		},
+		birthdate: {
+			type: Date,
+		},
 	},
 	{ timestamps: true }
 );

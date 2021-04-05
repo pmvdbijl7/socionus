@@ -28,7 +28,12 @@ h6 {
 	color: $primary-color;
 }
 
+section {
+	padding: 0 25px;
+}
+
 @import './header';
 @import './footer';
 @import './forms';
 @import './auth';
+@import './profile';

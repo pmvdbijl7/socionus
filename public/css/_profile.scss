@@ -1,0 +1,31 @@
+// Import Variables
+@import './variables';
+
+.user-info {
+	padding-top: 25px;
+	padding-bottom: 25px;
+
+	img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border: 3px solid $background-color;
+		border-radius: 50%;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	h2 {
+		color: $text-color;
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	p.description {
+		font-size: 16px;
+		margin: 0.6em 0;
+		color: $white;
+	}
+}

@@ -26,6 +26,10 @@ h6 {
   color: #7f5af0;
 }
 
+section {
+  padding: 0 25px;
+}
+
 header {
   height: 60px;
   padding: 0 25px;
@@ -337,5 +341,35 @@ form .msg-error {
 .auth-container p a {
   text-decoration: none;
   color: #7f5af0;
+}
+
+.user-info {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.user-info img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #16161a;
+  border-radius: 50%;
+}
+
+.user-info h1 {
+  font-size: 20px;
+}
+
+.user-info h2 {
+  color: #94a1b2;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.user-info p.description {
+  font-size: 16px;
+  margin: 0.6em 0;
+  color: #fffffe;
 }
 /*# sourceMappingURL=style.css.map */
