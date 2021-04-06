@@ -19,6 +19,10 @@ const userSchema = new Schema(
 			minLength: 8,
 			required: true,
 		},
+		banner_image: {
+			data: Buffer,
+			type: String,
+		},
 		profile_image: {
 			data: Buffer,
 			type: String,

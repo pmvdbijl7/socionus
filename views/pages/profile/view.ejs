@@ -5,7 +5,14 @@
 	</head>
 
 	<body>
+		<%- include('../../partials/_header-sub-alt'); %>
+
 		<main>
+			<section class="banner" <% if (user.banner_image) { %>
+				style="background-image: url('/uploads/<%= user.banner_image
+				%>')" <% } %>>
+			</section>
+
 			<section class="user-info">
 				<% if (user.profile_image) { %>
 				<img
@@ -28,11 +35,14 @@
 				<% } %> <% if (user.location) { %>
 				<p><%= user.location %></p>
 				<% } %> <% if (user.birthdate) { %>
-				<p><%= user.birthdate %></p>
+				<p>
+					Born <%= user.birthdate.toLocaleDateString('en-US', { month:
+					'long', day: 'numeric', year: 'numeric' }) %>
+				</p>
 				<% } %>
 
 				<p>
-					Joined <%= user.createdAt.toLocaleDateString('en-GB', {
+					Joined <%= user.createdAt.toLocaleDateString('en-US', {
 					month: 'long', year: 'numeric' }) %>
 				</p>
 			</section>

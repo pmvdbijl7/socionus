@@ -1,31 +1,48 @@
 // Import Variables
 @import './variables';
 
+.banner {
+	width: 100%;
+	height: 150px;
+	background-color: $primary-color;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .user-info {
-	padding-top: 25px;
-	padding-bottom: 25px;
+	margin-top: -40px;
 
 	img {
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
 		object-fit: cover;
 		border: 3px solid $background-color;
 		border-radius: 50%;
 	}
 
 	h1 {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	h2 {
 		color: $text-color;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 400;
 	}
 
+	p {
+		font-size: 14px;
+	}
+
 	p.description {
-		font-size: 16px;
 		margin: 0.6em 0;
 		color: $white;
+	}
+
+	form {
+		input[type='file'] {
+			display: none;
+		}
 	}
 }

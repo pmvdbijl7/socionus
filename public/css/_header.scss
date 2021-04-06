@@ -171,4 +171,53 @@ header {
 			color: $primary-color;
 		}
 	}
+
+	&.header-alt {
+		border: none;
+
+		.sec-group {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			h1 {
+				margin-left: 1em;
+				font-size: 18px;
+			}
+		}
+
+		button {
+			border: none;
+			outline: none;
+			background-color: transparent;
+			color: $primary-color;
+		}
+	}
+
+	&.header-sub-alt {
+		border: none;
+		position: fixed;
+		width: 100%;
+
+		a {
+			background-color: rgba(0, 0, 0, 0.3);
+			border-radius: 50%;
+			width: 33px;
+			height: 33px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				width: 20px;
+				height: 20px;
+				color: $white;
+			}
+
+			&:first-of-type svg {
+				width: 23px;
+				height: 23px;
+			}
+		}
+	}
 }

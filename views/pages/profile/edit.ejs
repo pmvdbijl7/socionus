@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../../partials/_head'); %>
+	</head>
+
+	<body>
+		<%- include('../../partials/_header-alt'); %>
+
+		<main>
+			<label for="banner_image">
+				<section class="banner" <% if (user.banner_image) { %>
+					style="background-image: url('/uploads/<%= user.banner_image
+					%>')" <% } %>>
+				</section>
+			</label>
+
+			<section class="user-info">
+				<form
+					action="/settings/profile?_method=PUT"
+					method="POST"
+					id="profileSettings"
+					enctype="multipart/form-data"
+				>
+					<input
+						type="file"
+						name="banner_image"
+						id="banner_image"
+						accept="image/*"
+						value="<%= user.banner_image %>"
+					/>
+
+					<div class="form-group">
+						<label for="profile_image">
+							<% if (user.profile_image) { %>
+							<img
+								src="/uploads/<%= user.profile_image %>"
+								alt="Profile image"
+							/>
+							<% } else { %>
+							<img
+								src="/media/images/default_profile_image.jpg"
+								alt="Profile image"
+							/>
+							<% } %>
+						</label>
+						<input
+							type="file"
+							name="profile_image"
+							id="profile_image"
+							accept="image/*"
+							value="<%= user.profile_image %>"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							value="<%= user.name %>"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="description">Bio</label>
+						<textarea name="description" id="description">
+<%= user.description %></textarea
+						>
+					</div>
+
+					<div class="form-group">
+						<label for="location">Location</label>
+						<input
+							type="text"
+							name="location"
+							id="location"
+							value="<%= user.location %>"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="url">Website</label>
+						<input
+							type="text"
+							name="url"
+							id="url"
+							value="<%= user.url %>"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="birthdate">Birthdate</label>
+						<input
+							type="date"
+							name="birthdate"
+							id="birthdate"
+							value="<%= user.birthdate %>"
+						/>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
